@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE payments SYSTEM "payments.dtd">
 <payments>
 	<payment>
 		<payment_id></payment_id>
