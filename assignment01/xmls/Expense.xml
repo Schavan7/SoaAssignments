@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE expenses SYSTEM "expenses.dtd">
+<expenses>
+	<expense>
+		<expense_id></expense_id>
+		<employee_id></employee_id>
+		<expense_type></expense_type>
+		<purpose_of_expense></purpose_of_expense>
+		<amount_spent></amount_spent>
+		<description></description>
+		<date_purchased></date_purchased>
+		<date_submitted></date_submitted>
+		<advance_amount></advance_amount>
+		<payment_method></payment_method>
+	</expense>
+</expenses>
