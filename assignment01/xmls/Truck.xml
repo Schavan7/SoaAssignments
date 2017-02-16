@@ -2,12 +2,22 @@
 <!DOCTYPE trucks SYSTEM "trucks.dtd">
 <trucks>
 	<truck>
-		<truck_id></truck_id>
-		<make></make>	
-		<year></year>
-		<model></model>
-		<license_plate_no></license_plate_no>
-		<employee_id></employee_id>
-		<color></color>
+		<truck_id>01</truck_id>
+		<make>ultima</make>	
+		<year>2007</year>
+		<model>charger</model>
+		<license_plate_no>IL001</license_plate_no>
+		<employee_id>e_01</employee_id>
+		<color>blue</color>
+	</truck>
+	
+	<truck>
+		<truck_id>02</truck_id>
+		<make>ford</make>	
+		<year>2008</year>
+		<model>charger</model>
+		<license_plate_no>IL002</license_plate_no>
+		<employee_id>e_02</employee_id>
+		<color>blue</color>
 	</truck>
 </trucks>
