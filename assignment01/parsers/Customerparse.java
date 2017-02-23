@@ -3,7 +3,6 @@ package parsers;
 import java.io.File;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -32,7 +31,7 @@ public class Customerparse extends DefaultHandler {
 	public static void main(String[] args){
 
 		try {	
-			File xmlFile = new File("src/xmls/Customer.xml");
+			File xmlFile = new File("xmls/Customer.xml");
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 			SAXParser saxParser = factory.newSAXParser();
 			Customerparse userhandler = new Customerparse();
@@ -109,9 +108,43 @@ public class Customerparse extends DefaultHandler {
 		      }else if (state) {
 		    	  System.out.println("State:" + new String(ch, start, length));
 		    	  state =false;
+		      }else if (postal_code) {
+		    	  System.out.println("Postal Code:" + new String(ch, start, length));
+		    	  postal_code =false;
+		      }else if (country) {
+		    	  System.out.println("Country:" + new String(ch, start, length));
+		    	  country =false;
+		      }else if (phone_no) {
+		    	  System.out.println("Phone no:" + new String(ch, start, length));
+		    	  phone_no =false;
+		      }else if (cell_number) {
+		    	  System.out.println("Cell no:" + new String(ch, start, length));
+		    	  cell_number =false;
+		      }else if (other_number) {
+		    	  System.out.println("Other no:" + new String(ch, start, length));
+		    	  other_number =false;
+		      }else if (fax_number) {
+		    	  System.out.println("Fax Number:" + new String(ch, start, length));
+		    	  fax_number =false;
+		      }else if (email_address) {
+		    	  System.out.println("Email Address:" + new String(ch, start, length));
+		    	  email_address =false;
+		      }else if (customer_type) {
+		    	  System.out.println("Customer Type:" + new String(ch, start, length));
+		    	  customer_type =false;
+		      }else if (company_type) {
+		    	  System.out.println("Company Type:" + new String(ch, start, length));
+		    	  company_type =false;
+		      }else if (contact_name) {
+		    	  System.out.println("Contact name:" + new String(ch, start, length));
+		    	  contact_name =false;
+		      }else if (alternate_contactname) {
+		    	  System.out.println("Alternate Contact name:" + new String(ch, start, length));
+		    	  alternate_contactname =false;
+		      }else if (date_entered) {
+		    	  System.out.println("date Entered:" + new String(ch, start, length));
+		    	  date_entered =false;
 		      }
-		      
-		      
 		}
 	}
 
