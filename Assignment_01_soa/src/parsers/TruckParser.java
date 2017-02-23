@@ -1,4 +1,4 @@
-	package parse;						
+package parsers;						
 	import java.io.File;						
 	import javax.xml.parsers.SAXParser;						
 	import javax.xml.parsers.SAXParserFactory;						
@@ -6,7 +6,7 @@
 	import org.xml.sax.SAXException;						
 	import org.xml.sax.helpers.DefaultHandler;						
 							
-	public class truck  extends DefaultHandler {						
+	public class TruckParser  extends DefaultHandler {						
 		boolean truck_id = false;					
 		boolean license_plate_no = false;					
 		boolean color = false;								
@@ -18,10 +18,10 @@
 		
 		public static void main(String[] args){					
 			try {				
-				File xmlFile = new File("xmls/truck.xml");			
+				File xmlFile = new File("xmls/Truck.xml");			
 				SAXParserFactory factory = SAXParserFactory.newInstance();			
 				SAXParser saxParser = factory.newSAXParser();			
-				transaction userhandler = new transaction();			
+				TruckParser userhandler = new TruckParser();			
 				saxParser.parse(xmlFile, userhandler);     			
 			} catch (Exception e) {				
 				e.printStackTrace();			
@@ -47,7 +47,7 @@
 			@Override				
 			public void endElement(String uri, 				
 					String localName, String qName) throws SAXException {		
-				if (qName.equalsIgnoreCase("customer")) {			
+				if (qName.equalsIgnoreCase("truck")) {			
 					System.out.println("End Element :" + qName);		
 				}			
 			}				
@@ -81,9 +81,3 @@
 			      }
 			    	  				
 		}					
-							
-
-
-
-
-

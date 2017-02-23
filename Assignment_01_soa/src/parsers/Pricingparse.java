@@ -1,4 +1,4 @@
-package parse;
+package parsers;
 						
 	import java.io.File;						
 	import javax.xml.parsers.SAXParser;						
@@ -7,7 +7,7 @@ package parse;
 	import org.xml.sax.SAXException;						
 	import org.xml.sax.helpers.DefaultHandler;						
 							
-	public class pricing  extends DefaultHandler {						
+	public class Pricingparse  extends DefaultHandler {						
 		boolean price_id = false;					
 		boolean location_id_from = false;					
 		boolean location_id_to = false;								
@@ -23,7 +23,7 @@ package parse;
 				File xmlFile = new File("xmls/pricing.xml");			
 				SAXParserFactory factory = SAXParserFactory.newInstance();			
 				SAXParser saxParser = factory.newSAXParser();			
-				transaction userhandler = new transaction();			
+				Pricingparse userhandler = new Pricingparse();			
 				saxParser.parse(xmlFile, userhandler);     			
 			} catch (Exception e) {				
 				e.printStackTrace();			
@@ -63,7 +63,7 @@ package parse;
 			@Override				
 			public void endElement(String uri, 				
 					String localName, String qName) throws SAXException {		
-				if (qName.equalsIgnoreCase("customer")) {			
+				if (qName.equalsIgnoreCase("pricing")) {			
 					System.out.println("End Element :" + qName);		
 				}			
 			}				
@@ -72,10 +72,10 @@ package parse;
 			   public void characters(char ch[], 				
 			      int start, int length) throws SAXException {				
 			      if (price_id) {				
-			    	  System.out.println("Truck ID:" + new String(ch, start, length));			
+			    	  System.out.println("Price ID:" + new String(ch, start, length));			
 			    	  price_id =false;			
 			      } else if (location_id_from) {				
-			    	  System.out.println("License Plate Number:" + new String(ch, start, length));			
+			    	  System.out.println("Location Id from:" + new String(ch, start, length));			
 			    	  location_id_from =false;			
 			      }else if (location_id_to) {				
 			    	  System.out.println("location_id_to:" + new String(ch, start, length));			
@@ -108,7 +108,3 @@ package parse;
 			      
 		}
 	}
-							
-
-
-

@@ -31,7 +31,7 @@ public class Customerparse extends DefaultHandler {
 	public static void main(String[] args){
 
 		try {	
-			File xmlFile = new File("xmls/customer.xml");
+			File xmlFile = new File("xmls/Customer.xml");
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 			SAXParser saxParser = factory.newSAXParser();
 			Customerparse userhandler = new Customerparse();
